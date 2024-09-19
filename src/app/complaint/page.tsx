@@ -10,7 +10,8 @@ import Details from './details';
 export default function Page({ searchParams }: any) {
   const { condition, person, treatment, details } = useComplaint();
   const router = useRouter();
-  const question = searchParams?.question ? searchParams?.question : 2;
+  
+  const question = searchParams?.question ? Number(searchParams?.question) : 2;
 
   useEffect(() => {
     if (!condition) {
