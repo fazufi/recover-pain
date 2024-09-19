@@ -21,7 +21,7 @@ export default memo(function Header({ hideMenus }: HeaderProps) {
 
   useEffect(() => {
     const scroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 30) {
         setScrollOnTop(false);
         return;
       }
@@ -43,7 +43,7 @@ export default memo(function Header({ hideMenus }: HeaderProps) {
 
   return (
     <header
-      className={`${onTop ? '' : 'bg-primary/10'} sticky top-0 z-[10] flex  justify-between items-center w-full root-px py-8`}
+      className={`${onTop ? '' : 'bg-white shadow'} sticky top-0 z-[10] flex  justify-between items-center w-full root-px py-8`}
     >
       <Link
         href={'/'}
