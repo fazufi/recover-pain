@@ -11,9 +11,9 @@ export default memo(function DefaultLayout({
   headerProps = {},
 }: Props) {
   return (
-    <div className="wrapper">
+    <div>
       <Header {...headerProps} />
-      <main>{children}</main>
+      <main className="wrapper">{children}</main>
     </div>
   );
 });
